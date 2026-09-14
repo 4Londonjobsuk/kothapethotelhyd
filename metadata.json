@@ -1,0 +1,6 @@
+{
+  "name": "Lotus Grand Hotel",
+  "description": "Official website for Lotus Grand Hotel in Kothapet / Saroornagar, Hyderabad, Telangana, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

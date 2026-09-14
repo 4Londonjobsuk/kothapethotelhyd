@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-display: "Marcellus", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --color-sapphire-950: #060f1e;
+  --color-sapphire-900: #0d1e3a;
+  --color-sapphire-800: #132a52;
+  --color-sapphire-700: #1b396e;
+  --color-sapphire-600: #254d91;
+  --color-gold-600: #b89342;
+  --color-gold-500: #c5a059;
+  --color-gold-400: #e0c37b;
+  --color-gold-300: #f0d88f;
+  --color-pearl-50: #ffffff;
+  --color-pearl-100: #fafafa;
+  --color-pearl-200: #f4f6f9;
+  --color-dark-900: #060f1e;
+  --color-dark-800: #0d1e3a;
+  --color-dark-700: #16284a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #fafafa;
+  }
+}
+
+.font-serif-heading {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-display-elegant {
+  font-family: 'Marcellus', Georgia, serif;
+}
+
+.font-script-calligraphy {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Custom scrollbar for gallery and smooth feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e8edf4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b89342;
+}
+
+/* 20-Year Veteran UI Button System */
+.btn-gold-luxury {
+  background: linear-gradient(135deg, #dfba73 0%, #c59a47 50%, #a8792c 100%);
+  color: #081220;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(254, 243, 199, 0.6);
+  box-shadow: 0 4px 16px rgba(197, 154, 71, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-gold-luxury:hover {
+  box-shadow: 0 8px 24px rgba(197, 154, 71, 0.52);
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+.btn-gold-luxury:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.btn-navy-luxury {
+  background: #0d1e3a;
+  color: #ffffff;
+  font-weight: 500;
+  border: 1px solid rgba(197, 154, 71, 0.35);
+  box-shadow: 0 4px 14px rgba(13, 30, 58, 0.28);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-navy-luxury:hover {
+  background: #142b52;
+  border-color: rgba(197, 154, 71, 0.7);
+  box-shadow: 0 8px 22px rgba(13, 30, 58, 0.4);
+  transform: translateY(-2px);
+}
+.btn-navy-luxury:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.btn-ghost-luxury {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2937;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn-ghost-luxury:hover {
+  background: #ffffff;
+  color: #0d1e3a;
+  border-color: #c59a47;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+.btn-ghost-luxury:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.card-luxury {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-luxury:hover {
+  border-color: rgba(197, 154, 71, 0.4);
+  box-shadow: 0 12px 32px rgba(13, 30, 58, 0.09);
+  transform: translateY(-3px);
+}
+
+/* Floating Calling Button: strictly for mobile devices in both portrait and landscape orientation */
+.mobile-calling-btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-calling-btn {
+    display: flex !important;
+  }
+}
+
+/* When rotated into landscape on mobile phones (narrow viewport height <= 550px) */
+@media (orientation: landscape) and (max-height: 550px) {
+  .mobile-calling-btn {
+    display: flex !important;
+  }
+}
+
+/* Mobile touch devices up to 1024px in landscape */
+@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
+  .mobile-calling-btn {
+    display: flex !important;
+  }
+}
+
+/* ========================================================================== */
+/* ADMIN CONSOLE LIGHT THEME SYSTEM (SCOPED STRICTLY TO .admin-theme-light)    */
+/* Does NOT affect public hotel pages. Preserves Lotus Grand gold branding.   */
+/* ========================================================================== */
+.admin-theme-light {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Light Mode Containers & Sidebars */
+.admin-theme-light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.admin-theme-light header {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Top bar in main area */
+.admin-theme-light .admin-top-header {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Surface cards inside admin */
+.admin-theme-light .bg-\[\#0B1526\],
+.admin-theme-light .bg-\[\#0b1526\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.admin-theme-light .bg-\[\#070E1A\],
+.admin-theme-light .bg-\[\#070e1a\] {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.admin-theme-light .bg-\[\#0D1E3A\],
+.admin-theme-light .bg-\[\#0d1e3a\] {
+  background-color: #fef9ee !important;
+  border-color: #e2c37b !important;
+}
+
+/* Borders */
+.admin-theme-light .border-stone-800,
+.admin-theme-light .border-stone-800\/80,
+.admin-theme-light .border-stone-800\/60,
+.admin-theme-light .border-stone-800\/40,
+.admin-theme-light .border-stone-700 {
+  border-color: #e2e8f0 !important;
+}
+
+.admin-theme-light .divide-stone-800,
+.admin-theme-light .divide-stone-800\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Headings & Text */
+.admin-theme-light .text-stone-100,
+.admin-theme-light .text-stone-200 {
+  color: #0f172a !important;
+}
+
+.admin-theme-light .text-stone-300 {
+  color: #334155 !important;
+}
+
+.admin-theme-light .text-stone-400 {
+  color: #64748b !important;
+}
+
+.admin-theme-light .text-stone-500 {
+  color: #94a3b8 !important;
+}
+
+/* Gold branding remains legible and rich */
+.admin-theme-light .text-\[\#E0C37B\],
+.admin-theme-light .text-\[\#e0c37b\] {
+  color: #996515 !important;
+}
+
+.admin-theme-light .text-\[\#FFF5A5\],
+.admin-theme-light .text-\[\#fff5a5\] {
+  color: #805010 !important;
+}
+
+/* Interactive elements & inputs */
+.admin-theme-light input,
+.admin-theme-light textarea,
+.admin-theme-light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.admin-theme-light input:focus,
+.admin-theme-light textarea:focus,
+.admin-theme-light select:focus {
+  border-color: #c59a47 !important;
+  box-shadow: 0 0 0 1px #c59a47 !important;
+}
+
+.admin-theme-light .bg-stone-900,
+.admin-theme-light .bg-stone-900\/60,
+.admin-theme-light .bg-stone-900\/40 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+.admin-theme-light .hover\:bg-stone-900:hover,
+.admin-theme-light .hover\:bg-stone-800:hover,
+.admin-theme-light .hover\:bg-white\/5:hover,
+.admin-theme-light .hover\:bg-white\/\[0\.02\]:hover {
+  background-color: #f8fafc !important;
+}
+
+.admin-theme-light thead tr {
+  border-color: #e2e8f0 !important;
+}
+
+.admin-theme-light th {
+  color: #64748b !important;
+}
+

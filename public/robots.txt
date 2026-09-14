@@ -1,0 +1,15 @@
+# Robots.txt for Lotus Grand Hotel, Hyderabad
+User-agent: *
+Allow: /
+Allow: /rooms
+Allow: /amenities
+Allow: /attractions
+Allow: /gallery
+Allow: /about
+Allow: /contact
+
+# Protect Admin panel from search crawlers
+Disallow: /admin
+Disallow: /admin/
+
+Sitemap: /sitemap.xml
